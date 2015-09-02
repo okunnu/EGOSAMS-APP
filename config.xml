@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "education.egosams"
-        versionCode = "2015-2.X"
+        versionCode = "2015"
         version   = "1.0">
     <name>EGOSAMS</name>
 
