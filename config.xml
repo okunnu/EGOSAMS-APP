@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.moodle.moodlemobile" version="2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>EGOSAMS Mobile App</name>
+  <name>EGOSAMS Online</name>
   <description>Official EGOSAMS Mobile app</description>
-  <author href="http://egosams.com" email="okunnu@egosams.com">Olusegun Okunnu</author>
+  <author href="http://egosams.com" email="okunnu@egosams.com">Juan Leyva</author>
   <content src="index.html"/>
   <access origin="*"/>
 
