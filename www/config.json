@@ -1,6 +1,6 @@
 {
-    "app_id" : "com.moodle.moodlemobile",
-    "versioncode" : "2002",
+    "app_id" : "education.egosams",
+    "versioncode" : "2015",
     "versionname" : "1.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",
