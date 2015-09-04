@@ -22,7 +22,7 @@ angular.module('mm.addons.mod_book')
  * @name mmaModBookIndexCtrl
  */
 .controller('mmaModBookIndexCtrl', function($scope, $stateParams, $mmUtil, $mmaModBook, $log, mmaModBookComponent,
-            $ionicPopover, $mmApp, $q, $mmCourse, $ionicScrollDelegate) {
+            $ionicPopover, $mmApp, $q, $mmCourse) {
     $log = $log.getInstance('mmaModBookIndexCtrl');
 
     var module = $stateParams.module || {},
@@ -42,7 +42,6 @@ angular.module('mm.addons.mod_book')
     // Convenience function to load a book chapter.
     function loadChapter(chapterId) {
         currentChapter = chapterId;
-        $ionicScrollDelegate.scrollTop();
         return $mmaModBook.getChapterContent(module.contents, chapterId, module.id).then(function(content) {
             $scope.content = content;
             $scope.previousChapter = $mmaModBook.getPreviousChapter(chapters, chapterId);
@@ -52,7 +51,6 @@ angular.module('mm.addons.mod_book')
             return $q.reject();
         }).finally(function() {
             $scope.loaded = true;
-            $ionicScrollDelegate.resize(); // Call resize to recalculate scroll area.
         });
     }
 

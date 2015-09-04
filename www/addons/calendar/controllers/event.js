@@ -76,15 +76,13 @@ angular.module('mm.addons.calendar')
 
         $mmaCalendar.getEventNotificationTime(eventid).then(function(notificationtime) {
             $scope.notification = { // Use an object, otherwise changes are not reflected.
-                time: String(notificationtime)
+                time: notificationtime
             };
         });
 
         $scope.updateNotificationTime = function() {
-            var time = parseInt($scope.notification.time);
-            if (!isNaN(time)) {
-                $mmaCalendar.updateNotificationTime($scope.event, time);
-            }
+            var time = $scope.notification.time;
+            $mmaCalendar.updateNotificationTime($scope.event, time);
         };
     }
 });

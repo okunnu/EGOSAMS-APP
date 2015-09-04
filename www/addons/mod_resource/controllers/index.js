@@ -120,10 +120,11 @@ angular.module('mm.addons.mod_resource')
     });
 
     $scope.doRefresh = function() {
-        $mmaModResource.invalidateContent(module.id).then(function() {
+        $mmaModResource.invalidateContent(module.id)
+        .then(function() {
             return fetchContent();
         }).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
+            $scope.loaded = true;
         });
     };
 

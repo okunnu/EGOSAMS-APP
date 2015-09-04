@@ -295,9 +295,7 @@ angular.module('mm.core')
     self.getDB = function(name, schema, options) {
         if (typeof dbInstances[name] === 'undefined') {
 
-            var isSafari = !ionic.Platform.isIOS() && !ionic.Platform.isAndroid() && navigator.userAgent.indexOf('Safari') != -1
-                            && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('Firefox') == -1;
-            if (typeof IDBObjectStore == 'undefined' || typeof IDBObjectStore.prototype.count == 'undefined' || isSafari) {
+            if (typeof IDBObjectStore == 'undefined' || typeof IDBObjectStore.prototype.count == 'undefined') {
                 // IndexedDB not implemented or not fully implemented (Galaxy S4 Mini). Use WebSQL.
                 if (typeof options.mechanisms == 'undefined') {
                     options.mechanisms = ['websql', 'sqlite', 'localstorage', 'sessionstorage', 'userdata', 'memory'];
