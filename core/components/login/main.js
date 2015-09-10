@@ -59,7 +59,7 @@ angular.module('mm.core.login', [])
         templateUrl: 'core/components/login/templates/credentials.html',
         controller: 'mmLoginCredentialsCtrl',
         params: {
-            siteurl: 'https://www.egosams.education'
+            siteurl: ''
         },
         onEnter: function($state, $stateParams) {
             // Do not allow access to this page when the URL was not passed.
