@@ -52,9 +52,6 @@ angular.module('mm.core.login', [])
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl',
-		onEnter: function($ionicNavBarDelegate, $ionicHistory, $mmSiteManager, $state) {
-			$state.go('mm_login.credentials', {siteurl: 'https://www.egosams.education'});
-		}
     })
 
     .state('mm_login.credentials', {
@@ -62,7 +59,7 @@ angular.module('mm.core.login', [])
         templateUrl: 'core/components/login/templates/credentials.html',
         controller: 'mmLoginCredentialsCtrl',
         params: {
-            siteurl: ''
+            siteurl: 'https://www.egosams.education'
         },
         onEnter: function($state, $stateParams) {
             // Do not allow access to this page when the URL was not passed.
